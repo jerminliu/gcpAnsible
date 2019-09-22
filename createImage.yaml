@@ -1,0 +1,13 @@
+- name: Create an image of vm
+  hosts: localhost
+  gather_facts: no
+  vars:
+      gcp_project: my-first-project-242305
+      gcp_cred_kind: serviceaccount
+      gcp_cred_file: /home/dewang_saurabh/gcpAnsible/stage3Image-builder.json
+      zone: "asia-south1-a"
+      region: "asia-south1"
+  roles:
+   - disk
+   - instance
+
